@@ -1,2 +1,2 @@
-# WP-OTF-Thumbnail-Generator
+# WP OTF Thumbnail Generator
 On the fly thumbnail generator for WordPress.
