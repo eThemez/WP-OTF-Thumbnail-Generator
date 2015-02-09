@@ -75,7 +75,7 @@
 			 * Get thumbnail size
 			 *
 			 * @since 1.0.0
-			 * @access public
+			 * @access private
 			 * @param string|array
 			 * @return array
 			 */
@@ -116,7 +116,7 @@
 			 * Get image sizes by size name
 			 *
 			 * @since 1.0.0
-			 * @access public
+			 * @access private
 			 * @param string
 			 * @return boolean|array
 			 */
@@ -144,7 +144,7 @@
 			 * Create thumbnail
 			 *
 			 * @since 1.0.0
-			 * @access public
+			 * @access private
 			 * @param integer
 			 * @param array
 			 * @return string
