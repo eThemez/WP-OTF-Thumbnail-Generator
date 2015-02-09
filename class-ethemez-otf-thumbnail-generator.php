@@ -15,8 +15,20 @@
 		 */
 		class eThemez_OTF_Thumbnail_Generator {
 			/**
-			 * This downsize class should be hooked to the wp-filter 'image_downsize' e.g.
-			 * add_filter( 'image_downsize', array('eThemez_OTF_Thumbnail_Generator', 'downsize'), 10, 3 );
+			 * Constructor
+			 *
+			 * @since 1.0.0
+			 * @access public
+			 * @param object
+			 * @return void
+			 */
+			public function __construct() {
+				remove_all_filters( 'image_downsize' );
+				add_filter( 'image_downsize', array($this, 'downsize'), 10, 3 );
+			}
+
+			/**
+			 * The downsize method
 			 *
 			 * @since 1.0.0
 			 * @access public
