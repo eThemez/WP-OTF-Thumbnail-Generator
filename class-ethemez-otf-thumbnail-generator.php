@@ -46,17 +46,15 @@
 					return false;
 
 				$dim = image_resize_dimensions( $image['width'], $image['height'], $width, $height, $crop );
-				list( $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h ) = $dim;
-
-				if( ( $width >= $image['width'] && $height >= $image['height'] )
-					|| ( $width <= 0 && $height <= 0 )
-				)
+				if( ! $dim )
 					return array(
 						wp_get_attachment_url($id),
 						$image['width'],
 						$image['height'],
 						false
 					);
+
+				list( $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h ) = $dim;
 
 				foreach( $image['sizes'] as $image_size_name => $image_size ) {
 					if( $image_size['width'] == $dst_w && $image_size['height'] == $dst_h )
